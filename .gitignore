@@ -1,0 +1,11 @@
+# Maven and local compilation output
+/target/
+/out/
+
+# IDE and operating-system files
+/.idea/
+.DS_Store
+
+# Local task data
+/data/*.db
+/data/*.txt

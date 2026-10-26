@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Thẻ gốc của file POM.
+         Các thuộc tính xmlns và xsi:schemaLocation giúp IDE nhận diện,
+         kiểm tra cấu trúc XML của POM. -->
+
+    <modelVersion>4.0.0</modelVersion>
+    <!-- Phiên bản cấu trúc POM, không phải phiên bản Maven hay Java. -->
+
+    <groupId>com.example</groupId>
+    <!-- Nhóm/không gian tên của project; thường viết theo dạng tên miền đảo ngược. -->
+
+    <artifactId>java-core-task-manager</artifactId>
+    <!-- Tên project. Maven dùng nó để nhận diện artifact này. -->
+
+    <version>1.0-SNAPSHOT</version>
+    <!-- Phiên bản project. SNAPSHOT thường đánh dấu phiên bản đang phát triển. -->
+
+    <properties>
+        <!-- Các thiết lập chung được dùng trong POM. -->
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Encoding của file nguồn; UTF-8 hỗ trợ chữ tiếng Việt. -->
+    </properties>
+
+    <dependencies>
+        <!-- Danh sách thư viện mà code project cần dùng. -->
+
+        <dependency>
+            <!-- Khai báo một thư viện cụ thể. -->
+
+            <groupId>org.xerial</groupId>
+            <!-- Nhóm phát hành thư viện SQLite JDBC. -->
+
+            <artifactId>sqlite-jdbc</artifactId>
+            <!-- Tên thư viện. -->
+
+            <version>3.53.4.0</version>
+            <!-- Phiên bản SQLite JDBC; đang khớp với JAR bạn tải thủ công. -->
+        </dependency>
+    </dependencies>
+
+    <build>
+        <!-- Các cấu hình liên quan đến quá trình build. -->
+
+        <plugins>
+            <!-- Các công cụ Maven dùng trong lúc build project. -->
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <!-- Nhóm phát hành plugin. -->
+
+                <artifactId>maven-compiler-plugin</artifactId>
+                <!-- Plugin giúp Maven biên dịch mã Java. -->
+
+                <version>3.16.0</version>
+                <!-- Phiên bản của plugin, không phải phiên bản Java. -->
+
+                <configuration>
+                    <release>21</release>
+                    <!-- Biên dịch project theo Java 21. -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
